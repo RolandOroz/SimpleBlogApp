@@ -14,15 +14,12 @@ public class Post {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     @NotBlank
     @Column
     private String title;
-
-
     @Lob
     @Column
-    @NotBlank
+    @NotEmpty
     private String content;
     @Column
     private Instant createdOn;
