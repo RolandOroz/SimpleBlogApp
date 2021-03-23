@@ -1,6 +1,6 @@
 package com.rolandoroz.simpleblogapp.model;
 
-import lombok.NonNull;
+
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
@@ -16,18 +16,20 @@ public class Post {
     private Long id;
     @NotBlank
     @Column
-    private String title;
+    private String title;   //title of blog
     @Lob
     @Column
     @NotEmpty
-    private String content;
+    private String content;   //content of blog
     @Column
-    private Instant createdOn;
+    private Instant createdOn;  //time stamp
     @Column
-    private Instant updatedOn;
+    private Instant updatedOn;  //time stamp
     @Column
     @NotBlank
-    private String username;
+    private String username;  //name of the user of blogApp
+
+    //-------getter and setter---------//
 
     public Long getId() {
         return id;
